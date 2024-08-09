@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>JavaScript Loop</h1>
+      <script>
+         let fruits = ['Apple', 'Strawberry', 'Melon', 'Mongo']
+         //  for (let i = 0; i < fruits.length; i++) {
+         //  for (let a of fruits) {
+         //     console.log(a)
+         //  }
+         let car = { maker: 'popo', price: 2000, name: 'poporing' }
+         for (const key in car) {
+            // console.log(key)
+            console.log(`${key} ==> ${car[key]}`) //maker ==> popo price ==> 2000 name ==> poporing
+         }
+      </script>
+   </body>
+</html>

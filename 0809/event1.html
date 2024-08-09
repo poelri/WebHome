@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         ol {
+            list-style-type: none;
+         }
+         ol > li {
+            display: inline;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Prevent Default Event</h1>
+      <ol>
+         <li><a href="#" id="ja">자칸 |</a></li>
+         <li><a href="#" id="cat">고양이 |</a></li>
+         <li><a href="#" id="pink">핑크 </a></li>
+      </ol>
+      <hr />
+      <div id="result"><img src="" alt="" id="myImg" /></div>
+      <script>
+         // 자바스크립트 코드는 페이지에 있는 모든 링크(<a> 태그)를 대상으로,
+         // 클릭할 때마다 해당 링크의 id 속성을 콘솔에 출력하도록 설정
+
+         const alinks = document.getElementsByTagName('a')
+         // 모든 <a> 태그를 가져오고, 이를 배열처럼 사용할 수 있는 유사 배열 형태로 반환
+
+         for (let i = 0; i < alinks.length; i++) {
+            alinks[i].addEventListener('click', myClick, false)
+            // 각 링크를 클릭할 때마다 myClick 함수가 호출
+         }
+         function myClick(evt) {
+            evt.prventDefault() // 특정 이벤트가 발생했을 때, 브라우저가 기본적으로 수행하는 동작을 중지
+            // console.log(evt.target.id)
+            const img = document.getElementById('myImg')
+            switch (evt.target.id) {
+               case 'ja':
+                  img.setAttribute('src', 'images/ja.jpg')
+                  break
+               case 'cat':
+                  img.setAttribute('src', 'images/cat.jpg')
+                  break
+               case 'pink':
+                  img.setAttribute('src', 'images/pink.jpg')
+                  break
+            }
+         }
+      </script>
+   </body>
+</html>

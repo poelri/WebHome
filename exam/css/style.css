@@ -1,0 +1,52 @@
+body{
+  display: flex;
+}
+.outer{
+  border: 0.1rem solid;
+  width: 20rem;
+  height: 25rem;
+  padding: 1rem;
+  border-color: rgb(33, 160, 61);
+}
+
+.name{
+text-align: right;
+}
+
+.name2{
+  width: 7rem;
+  height: 1rem;
+}
+
+.result{
+  float: right;
+  width: 5rem;
+}
+
+.outer2{
+    display: none;
+    margin-top: 2.2rem;
+    border: 0.1rem solid;
+    width: 23rem;
+    height: 22.8rem;
+    padding: 1rem;
+    border-color: rgb(33, 160, 61);
+}
+
+.buttonP{
+  text-align: center;
+}
+
+.resultButton{
+      
+      width: 5rem;
+}
+
+.score{
+  color: red;
+  font-weight: 900;
+}
+
+.clean{
+  margin: 1rem;
+}

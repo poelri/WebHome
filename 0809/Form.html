@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script>
+         window.addEventListener('load', init, false)
+         function init() {
+            // const original = document.querySelector('#original') // id가 'original'인 입력 필드를 선택하여 변수에 저장
+            //change는 자기의 focus가 바뀔 때, 실행된다.
+            // original.addEventListener('change', myChange, false) // 'input' 이벤트를 사용하여 입력 필드 값이 변경될 때 'myChange' 함수를 호출
+            const email = document.querySelector('#email')
+            email.addEventListener('change', myChange, false)
+         }
+         function myChange(evt) {
+            const user = evt.target.value
+            const regex = new RegExp('^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$')
+            if (regex.test(user)) {
+               //user가 제대로 Email을 입력했다면
+               document.body.style.backgroundColor = 'green'
+               alert('Success')
+            } else {
+               document.body.style.backgroundColor = 'red'
+               alert('Failure')
+            }
+            // console.log(evt.target.value)
+            // document.querySelector('#target').value = evt.target.value // 'original' 입력 필드에서 변경된 값을 'target' 입력 필드에 설정
+         }
+      </script>
+   </head>
+   <body>
+      <h1>Form & Event</h1>
+      <form id="myform">
+         <p>Email : <input type="email" id="email" size="40" /></p>
+         <!-- <p>Original : <input type="text" id="original" size="40" /></p> -->
+         <!-- original'이라는 id를 가진 입력 필드를 생성 -->
+         <!-- <p>Target : <input type="text" id="target" size="40" /></p> -->
+         <!--'target'이라는 id를 가진 입력 필드를 생성-->
+      </form>
+   </body>
+</html>

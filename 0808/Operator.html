@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>JavaScript Operator</h1>
+      <script>
+         //  let age = 'Hello, World'
+         //  console.log(typeof age) // 넌 정체가 뭐야 ? String~
+         //  age = 28
+         //  console.log(typeof age) // number
+         //  age = 4 > 7
+         //  console.log(typeof age) // boolean
+         //  let address
+         //  console.log(typeof address) // undefined
+         //  address = null
+         //  console.log(typeof address) // object
+         //  address = [1, 2, 3]
+         //  console.log(address) // object
+         //  address = { name: 'popo', age: 28 }
+         //  console.log(typeof address) // object
+         //  address = () => {
+         //     console.log('Hello, World')
+         //  }
+         //  console.log(typeof address) // function
+
+         let fruits = ['Mango', 'Melon', 'Apple']
+         console.log(fruits) // ['Mango', 'Melon', 'Apple']
+         delete fruits[1]
+         console.log(fruits) // ['Mango', empty, 'Apple']
+         console.log(fruits[1]) // undefined
+         let car = { name: 'Sonata', price: 30000000, maker: 'Hyndai' }
+         console.log(car) // {name: 'Sonata', price: 30000000, maker: 'Hyndai'}
+         delete car.price
+         //  console.log(price in car)
+         console.log('maker' in car) //true
+         console.log(car['maker']) // Hynday
+         //  console.log(car) // {name: 'Sonata', maker: 'Hyndai'}
+         //  delete car
+         //  console.log(car)
+      </script>
+   </body>
+</html>

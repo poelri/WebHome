@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>Inner Function & console</h1>
+      <script>
+         function outer(greeting) {
+            // return greetin + ', jimin'; // string
+            // return 5 // number literal
+            // return false // boolean literal
+            // return ['Mango', 'Apple'] // array literal
+            // return { name: 'popo', price: 30000 } // object literal
+            return function inner(whom) {
+               console.log(greeting + ',' + whom)
+            }
+         }
+         const result = outer('Hello')
+         result('popopo')
+         result('poporing')
+         const eval = outer('Good Morning')
+         eval('pojjang')
+         //console.log(result[1])
+      </script>
+   </body>
+</html>
