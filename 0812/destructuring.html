@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Destructuring</h1>
+    <script>
+      // const student = {
+      //   name: "포포링",
+      //   age: 28,
+      //   address: "서울시 영등포구 선유로9길 30",
+      // };
+      // const { name, age, address } = student;
+      // console.log(`name=${name}, age = ${age}, addreass=${address}`);
+      // const array = [1, 2, 3, 4, 5];
+      // const [a, ...b] = array;
+      // const [, , ...c] = array;
+      // console.log(a, b, c);
+
+      // Default Parameter와 연동하기
+      // const [a = 10, b = 20] = [undefined, 5];
+      // console.log(a, b); // 10 5
+      // const [c, d = c * 2] = [5];
+      // console.log(c, d); // 5 10
+
+      // Swopping
+      // ES5
+      // var a = 10;
+      // var b = 20;
+      // var c = b;
+      // b = a;
+      // a = c;
+      // ES6
+      // let a = 10;
+      // let b = 20;
+      // [a, b] = [b, a];
+      // console.log(a, b); // 20 10
+      // function func([a, b, c = a + b]) {
+      //   console.log(a, b, c);
+      // }
+      // func([100, 200]);
+
+      // function func({ a, b, c = a + b }) {
+      //   console.log(a, b, c);
+      // }
+      // func({ a: 100, b: 200 });
+
+      // Destructuring을 배열이나 객체로 전달하고자 할 때
+      // 반드시 배열은 배열로, 객체를 객체로 전달 받아야한다.
+      // 객체의 해체기준은 key 기준이다. 배열은 index 기준이다.
+
+      // const { x, ...rest } = { x: 1, y: 2, z: 3 };
+      // console.log(x);
+      // console.log(rest);
+
+      const user = {
+        firstName: "포",
+        LastName: "링링이",
+      };
+      const { firstName, LastName } = user;
+      // console.log(user.firstName, user.LastName);
+      // console.log(firstName, LastName);
+
+      const student = {
+        name: "포포야",
+        address: {
+          zipcode: "12345",
+          city: "Seoul",
+        },
+      };
+      const {
+        address: { city },
+      } = student;
+      // console.log(city);
+
+      // const printUser = (user) => {
+      // console.log(user.name);
+      const printUser = ({ name }) => {
+        console.log(name);
+      };
+      printUser({ id: "popo", name: "popoyayo" });
+    </script>
+  </body>
+</html>
